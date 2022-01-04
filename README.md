@@ -47,7 +47,7 @@ kubectl apply -f manifests/crd.yaml --v=7
 Check [http://127.0.0.1:8001/apis/apiextensions.k8s.io/v1/customresourcedefinitions](http://127.0.0.1:8001/apis/apiextensions.k8s.io/v1/customresourcedefinitions) to view the resource you just created.
 The endpoint to the XmasService resource is to be found here: [http://127.0.0.1:8001/apis/deeptalk.deepshore.de/v1/xmasservices](http://127.0.0.1:8001/apis/deeptalk.deepshore.de/v1/xmasservices).
 
-You can now manage the corresponding objects via the new endpoint.
+We are now able manage the corresponding objects via the new endpoint.
 
 ### Deploying an Operator
 
@@ -62,7 +62,10 @@ Then we can generate a Christmas web service according to our liking via manifes
 kubectl apply -f manifests/cr.yaml
 ```
 
-
+We can make the web service accessible via [http://127.0.0.1:8080](http://127.0.0.1:8080) using port-forwarding:
+```bash
+kubectl port-forward svc/xmas-services-demo 8080:80
+```
 
 We can configure the web service via the properties of the spec. For example, we can set the size of the snowflakes via the `snowflakesSize` property:
 ```bash
