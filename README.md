@@ -10,7 +10,7 @@ We can simplify accessing the Kubernetes API by using a proxy:
 kubectl proxy
 ```
 
-We can Obtain a list of the Kubernetes API groups by calling [http://127.0.0.1:8001/apis](http://127.0.0.1:8001/apis).
+We can obtain a list of the Kubernetes API groups by calling [http://127.0.0.1:8001/apis](http://127.0.0.1:8001/apis).
 Note that there is no item representing the Core group in this list.
 
 We can get a list of the resources provided by the Core group via [http://127.0.0.1:8001/api/v1](http://127.0.0.1:8001/api/v1).
