@@ -1,0 +1,8 @@
+apiVersion: "deeptalk.deepshore.de/v1"
+kind: XmasService
+metadata:
+  name: demo
+spec:
+  replicas: 3
+  serviceType: ClusterIP
+  snowflakesSize: 1
